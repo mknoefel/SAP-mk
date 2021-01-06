@@ -8,6 +8,6 @@ properties:
   - url:
       value: 'https://randomuser.me/api/'
       sensitive: false
-  - results: '4'
+  - results: '1'
   - nat: de
   - format: jsn
