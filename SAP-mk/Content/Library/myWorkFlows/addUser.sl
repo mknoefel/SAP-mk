@@ -1,10 +1,21 @@
 namespace: myWorkFlows
 flow:
   name: addUser
+  inputs:
+    - login
+    - firstname
+    - lastname
+    - email
+    - phone
   workflow:
     - addUserToAOS:
         do:
-          myWorkFlows.addUserToAOS: []
+          myWorkFlows.addUserToAOS:
+            - username: '${login}'
+            - email: '${email}'
+            - telephone: '${phone}'
+            - firstName: '${firstname}'
+            - lastName: '${lastname}'
         navigate:
           - SUCCESS: SUCCESS
           - WARNING: SUCCESS
