@@ -7,6 +7,7 @@ flow:
           io.cloudslang.base.http.http_client_get:
             - url: "${get_sp('fakeUsers.url')+'?noinfo&nat='+get_sp('fakeUsers.nat')+'&results='+get_sp('fakeUsers.results')}"
             - query_params: 'inc=name,phone,login,email'
+            - content_type: text/json;charset=utf-8
         publish:
           - returnJson: '${return_result}'
         navigate:
