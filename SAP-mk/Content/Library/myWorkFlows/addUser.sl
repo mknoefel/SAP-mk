@@ -11,11 +11,12 @@ flow:
     - addUserToAOS:
         do:
           myWorkFlows.addUserToAOS:
-            - username: '${login}'
+            - login: '${login}'
+            - firstname: '${firstname}'
+            - lastname: '${lastname}'
+            - password: Cloud@123
             - email: '${email}'
             - telephone: '${phone}'
-            - firstName: '${firstname}'
-            - lastName: '${lastname}'
         navigate:
           - SUCCESS: SUCCESS
           - WARNING: SUCCESS

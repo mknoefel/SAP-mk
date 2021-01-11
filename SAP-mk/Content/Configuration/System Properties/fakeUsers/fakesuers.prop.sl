@@ -9,5 +9,5 @@ properties:
       value: 'https://randomuser.me/api/'
       sensitive: false
   - results: '1'
-  - nat: de
+  - nat: gb
   - format: jsn

@@ -23,7 +23,7 @@ flow:
           - lastName: "${cs_regex(cs_json_query(json_input, \"$.results[0].name.last\"),\"[^\\[\\]\\\"]+\")}"
           - phone: "${cs_regex(cs_json_query(json_input, \"$.results[0].phone\"),\"[^\\[\\]\\\"]+\")}"
           - email: "${cs_regex(cs_json_query(json_input, \"$.results[0].email\"),\"[^\\[\\]\\\"]+\")}"
-          - login: "${cs_regex(cs_json_query(json_input, \"$.results[0].login.username\"),\"[^\\[\\]\\\"]+\")}"
+          - login: "${cs_regex(cs_json_query(json_input, \"$.results[0].login.username\"),\"[^\\[\\]\\\"]+\")[0:15]}"
         navigate:
           - SUCCESS: SUCCESS
           - FAILURE: on_failure
